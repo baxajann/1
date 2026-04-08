@@ -71,7 +71,7 @@ const INTEGRATIONS: Integration[] = [
   },
 ]
 
-const apiKey = "sk_live_4rX9kP8mN2jQ7wY5vL3tH6bC1dE0fA"
+const apiKey = process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY || "";
 
 function StatusBadge({ status }: { status: Integration["status"] }) {
   const cfg = {
